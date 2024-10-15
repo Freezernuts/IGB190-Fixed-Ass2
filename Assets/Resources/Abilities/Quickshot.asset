@@ -23,7 +23,7 @@ MonoBehaviour:
   range: 8
   castTime: 0.3
   abilityCooldown: 0
-  abilityCost: 5
+  abilityCost: 0
   movementLock: 1
   animationActivationPosition: 0.5
   canMoveWhileCasting: 0

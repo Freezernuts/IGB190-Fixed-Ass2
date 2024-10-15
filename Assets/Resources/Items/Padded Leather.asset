@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
+  m_Name: Padded Leather
+  m_EditorClassIdentifier: 
+  itemName: Padded Leather
+  itemDescription: Thick but lighter than other armors, perfect for those looking
+    for maneuverability over protection.
+  randomStatCount: 1
+  itemCost: 50
+  itemIcon: {fileID: 21300000, guid: c2a8abde6fd547746952a2a966a7c197, type: 3}
+  itemType: 3
+  itemRarity: 0
+  engine:
+    scripts:
+    - scriptName: Item Equipped
+      scriptUID: 719311999
+      hasWait: 0
+      eventNodes:
+      - rid: 7228903376399368192
+      conditionNodes: []
+      actionNodes: []
+    - scriptName: Item Unequipped
+      scriptUID: 1142977027
+      hasWait: 0
+      eventNodes:
+      - rid: 7228903376399368193
+      conditionNodes: []
+      actionNodes: []
+  guaranteedStats:
+  - stat: 1
+    minimum: 5
+    maximum: 10
+    isPercent: 0
+  randomisableStats: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 7228903376399368192
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ScriptLoaded
+        functionDescription: Time/On script loaded
+        functionDynamicDescription: On script loaded
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 7228903376399368193
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ScriptUnloaded
+        functionDescription: Time/On script unloaded
+        functionDynamicDescription: On script unloaded
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []

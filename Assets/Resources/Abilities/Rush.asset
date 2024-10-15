@@ -20,7 +20,7 @@ MonoBehaviour:
   abilityDescription: Charge towards the target location, dealing 150% weapon damage
     to all enemies near the point of impact.
   abilityAnimation: One Hand Slash
-  range: 7
+  range: 3
   castTime: 0
   abilityCooldown: 10
   abilityCost: 0
@@ -582,7 +582,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 6965425286332402199, guid: 341008931f40b344aac4db90f0d8a1fb, type: 3}
+        value: {fileID: 6042401496488386589, guid: 5f6af1c4c1fcfc54d9e4f8b2b4810fb9, type: 3}
     - rid: 7228903372886114419
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
