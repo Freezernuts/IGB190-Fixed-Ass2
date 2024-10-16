@@ -4997,16 +4997,16 @@ MonoBehaviour:
   health: 100
   resource: 0
   baseDamage: 5
-  baseAttacksPerSecond: 1
-  baseMaxHealth: 200
+  baseAttacksPerSecond: 2
+  baseMaxHealth: 75
   baseMaxResource: 100
-  baseMovementSpeed: 1
+  baseMovementSpeed: 2
   baseArmor: 0
   baseCriticalStrikeChance: 0
   baseCriticalStrikeDamage: 2
   baseHealthRegen: 0
   baseResourceRegen: 0
-  baseAttackRange: 2.2
+  baseAttackRange: 8
   abilities:
   - {fileID: 11400000, guid: a754a6374a0c8674cbcc3b4c8912ec17, type: 2}
   lastAbilityCast: {fileID: 0}

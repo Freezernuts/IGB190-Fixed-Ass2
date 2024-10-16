@@ -91,10 +91,19 @@ public class Monster : Unit
     /// </summary>
     private void ApplyMonsterScaling()
     {
-        float modifier = Mathf.Pow(GameManager.monsterScalingValues.increasedHealthPerPlayerLevel + 1, GameManager.player.currentLevel);
+        float playerLevel = GameManager.player.currentLevel; // Get the player's level
 
-        baseMaxHealth *= modifier;
-        baseDamage *= modifier;
+        // scale base stats based on the player level
+        float healthModifier = Mathf.Pow(GameManager.monsterScalingValues.increasedHealthPerPlayerLevel + 1, playerLevel);
+        float damageModifier = Mathf.Pow(GameManager.monsterScalingValues.increasedDamagePerPlayerLevel + 1, playerLevel);
+        float armorModifier = Mathf.Pow(GameManager.monsterScalingValues.increasedArmorPerPlayerLevel + 1, playerLevel); //added an armor scaling system
+
+        baseMaxHealth *= healthModifier;
+        baseDamage *= damageModifier;
+        baseArmor *= armorModifier;
+
+        //New scaling system and xp
+        experienceModifier *= Mathf.Pow(GameManager.monsterScalingValues.increasedXPPerPlayerLevel + 1, playerLevel);  // Scale XP reward
     }
 
     /// <summary>
@@ -227,11 +236,11 @@ public class Monster : Unit
     /// <summary>
     /// Kills this unit, spawning gold, items, and giving experience to the player.
     /// </summary>
-    public override void Kill(Unit killingUnit, IEngineHandler killingSource)
+    public override void Kill(Unit killingUnit, IEngineHandler killingSource, bool isCritical)
     {
         if (isDead) return;
 
-        base.Kill(killingUnit, killingSource);
+        base.Kill(killingUnit, killingSource, isCritical);
         HandleKillCleanup();
 
         HandleMonsterDrops();

@@ -98,11 +98,11 @@ MonoBehaviour:
   health: 100
   resource: 0
   baseDamage: 30
-  baseAttacksPerSecond: 2
+  baseAttacksPerSecond: 1
   baseMaxHealth: 600
   baseMaxResource: 100
   baseMovementSpeed: 2
-  baseArmor: 0
+  baseArmor: 1
   baseCriticalStrikeChance: 0.2
   baseCriticalStrikeDamage: 2
   baseHealthRegen: 0
@@ -110,7 +110,7 @@ MonoBehaviour:
   baseAttackRange: 2
   abilities:
   - {fileID: 11400000, guid: 7f5a643269b552c4586bd9cabd56b69e, type: 2}
-  - {fileID: 11400000, guid: 78a26e0a386159c468fb4ad26178fd34, type: 2}
+  - {fileID: 11400000, guid: 888abef5ef03d264188163cd498d709d, type: 2}
   lastAbilityCast: {fileID: 0}
   handPoint: {fileID: 8602773439654565985}
   onDeathFeedback: {fileID: 11400000, guid: 0256ddc6b3a273d418c5861d14162aa9, type: 2}

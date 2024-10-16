@@ -189,6 +189,7 @@ public class GameManager : MonoBehaviour
         public float baseMonsterXP = 10;
         public float startingXPPerLevel = 100;
         public float additionalMaxXPPerLevel = 100;
+        public float xpGrowthPerLevel = 1.15f;  // XP required grows by 15% per level
     }
 
     [SerializeField] private MonsterScalingValues _monsterScalingValues;
@@ -197,6 +198,8 @@ public class GameManager : MonoBehaviour
     {
         [Range(0.0f, 1.0f)] public float increasedHealthPerPlayerLevel = 0.2f;
         [Range(0.0f, 1.0f)] public float increasedDamagePerPlayerLevel = 0.2f;
+        [Range(0.0f, 1.0f)] public float increasedArmorPerPlayerLevel = 0.1f;   // New: scaling for armor
+        [Range(0.0f, 1.0f)] public float increasedXPPerPlayerLevel = 0.1f;      // New: scaling for XP rewards
     }
 
     [SerializeField] private HealthGlobeValues _healthGlobeValues;
@@ -294,13 +297,6 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.C))
         {
             ui.CharacterWindow.Show();
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-            player.Teleport(new Vector3(-110, -8, 177.5f));
-
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            player.AddExperience(10000);
         }
     }
 }
