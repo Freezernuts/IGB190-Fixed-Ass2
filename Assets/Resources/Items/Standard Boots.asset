@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
+  m_Name: Standard Boots
+  m_EditorClassIdentifier: 
+  itemName: Standard Boots
+  itemDescription: Typical leather boots, for typical heroes.
+  randomStatCount: 0
+  itemCost: 50
+  itemIcon: {fileID: 21300000, guid: d687f263463ca254ba211f0a97124ada, type: 3}
+  itemType: 4
+  itemRarity: 0
+  engine:
+    scripts:
+    - scriptName: Item Equipped
+      scriptUID: 2143595005
+      hasWait: 0
+      eventNodes:
+      - rid: 7228903391467667590
+      conditionNodes: []
+      actionNodes: []
+    - scriptName: Item Unequipped
+      scriptUID: 1308395611
+      hasWait: 0
+      eventNodes:
+      - rid: 7228903391467667591
+      conditionNodes: []
+      actionNodes: []
+  template: {fileID: 0}
+  guaranteedStats:
+  - stat: 1
+    minimum: 2
+    maximum: 5
+    isPercent: 0
+  randomisableStats: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 7228903391467667590
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ScriptLoaded
+        functionDescription: Time/On script loaded
+        functionDynamicDescription: On script loaded
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 7228903391467667591
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ScriptUnloaded
+        functionDescription: Time/On script unloaded
+        functionDynamicDescription: On script unloaded
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []

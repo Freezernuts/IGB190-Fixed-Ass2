@@ -4998,7 +4998,7 @@ MonoBehaviour:
   resource: 0
   baseDamage: 5
   baseAttacksPerSecond: 2
-  baseMaxHealth: 75
+  baseMaxHealth: 50
   baseMaxResource: 100
   baseMovementSpeed: 2
   baseArmor: 0

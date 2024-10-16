@@ -27,12 +27,12 @@ MonoBehaviour:
   abilityCost: 50
   movementLock: 1
   animationActivationPosition: 0.5
-  canMoveWhileCasting: 0
+  canMoveWhileCasting: 1
   hasSpecificCastTime: 0
   cooldownIsAtackSpeed: 0
   abilityGeneratesResource: 0
   requiresLineOfSight: 0
-  canUpdateTargetWhileCasting: 0
+  canUpdateTargetWhileCasting: 1
   castAtClosestPointInRange: 1
   castCompleteSound: {fileID: 8300000, guid: 59979b05ac0f0b646bb6abde15e66115, type: 3}
   castCompleteSoundVolume: 0.45
@@ -400,7 +400,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 1447509499946109569, guid: 6024171063f1a5c4a9cacfac213e16ff, type: 3}
+        value: {fileID: 2462897555516416004, guid: f640f8c1fcb9a79429bc9c4a48477653, type: 3}
     - rid: 7228903372886114436
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:

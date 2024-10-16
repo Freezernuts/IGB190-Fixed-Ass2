@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
+  m_Name: Azure Boots
+  m_EditorClassIdentifier: 
+  itemName: Azure Boots
+  itemDescription: Enchanted with magic, these boots give the wearer incredible speed.
+  randomStatCount: 0
+  itemCost: 120
+  itemIcon: {fileID: 21300000, guid: a49193b555b34a046a80294f41fb8bf9, type: 3}
+  itemType: 4
+  itemRarity: 2
+  engine:
+    scripts:
+    - scriptName: Item Equipped
+      scriptUID: 297805561
+      hasWait: 0
+      eventNodes:
+      - rid: 7228903391467667602
+      conditionNodes: []
+      actionNodes: []
+    - scriptName: Item Unequipped
+      scriptUID: 1893097231
+      hasWait: 0
+      eventNodes:
+      - rid: 7228903391467667603
+      conditionNodes: []
+      actionNodes: []
+  template: {fileID: 0}
+  guaranteedStats:
+  - stat: 3
+    minimum: 0.1
+    maximum: 0.15
+    isPercent: 1
+  - stat: 6
+    minimum: 0.2
+    maximum: 0.25
+    isPercent: 1
+  - stat: 1
+    minimum: 2
+    maximum: 5
+    isPercent: 0
+  randomisableStats: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 7228903391467667602
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ScriptLoaded
+        functionDescription: Time/On script loaded
+        functionDynamicDescription: On script loaded
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 7228903391467667603
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ScriptUnloaded
+        functionDescription: Time/On script unloaded
+        functionDynamicDescription: On script unloaded
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []

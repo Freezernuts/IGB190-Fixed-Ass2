@@ -36,10 +36,11 @@ MonoBehaviour:
       - rid: 7228903376399368200
       conditionNodes: []
       actionNodes: []
+  template: {fileID: 0}
   guaranteedStats:
   - stat: 1
     minimum: 2
-    maximum: 6
+    maximum: 4
     isPercent: 0
   - stat: 7
     minimum: 0.1
