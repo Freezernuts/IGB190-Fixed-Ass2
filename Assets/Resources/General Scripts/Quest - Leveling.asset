@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   engine:
     scripts:
-    - scriptName: Quest start
+    - scriptName: Quest Start
       scriptUID: 1536312644
       hasWait: 0
       eventNodes:
@@ -25,7 +25,7 @@ MonoBehaviour:
       - rid: 4251376411214872584
       - rid: 4251376411214872585
       - rid: 4251376411214872586
-    - scriptName: Quest completed
+    - scriptName: Quest Completed
       scriptUID: 1059467146
       hasWait: 0
       eventNodes:
