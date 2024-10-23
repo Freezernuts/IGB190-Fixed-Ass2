@@ -43,7 +43,6 @@ MonoBehaviour:
       - rid: 6507296178306548442
       - rid: 6507296248562712734
       - rid: 6507296248562712588
-      - rid: 6507296178306548447
       - rid: 6507296178306548449
       - rid: 6507296178306548452
       - rid: 6507296178306548487
@@ -53,11 +52,7 @@ MonoBehaviour:
       - rid: 6507296178306548568
       - rid: 6507296248562712582
       - rid: 6507296178306548494
-      - rid: 6507296248562712591
-      - rid: 6507296178306548623
-      - rid: 6507296178306548626
       - rid: 6507296178306548629
-      - rid: 6507296178306548632
     - scriptName: Pick Up Item Prompt
       scriptUID: 963774117
       hasWait: 0
@@ -104,6 +99,7 @@ MonoBehaviour:
       - rid: 6507296248562712785
       - rid: 6507296248562712788
       - rid: 6507296248562712792
+      - rid: 6507296268711887393
   references:
     version: 2
     RefIds:
@@ -350,42 +346,6 @@ MonoBehaviour:
         allowFunction: 1
         value: Tutorial Goal
         options: []
-    - rid: 6507296178306548447
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: ChangeGameMusic
-        functionDescription: Audio/Play Music
-        functionDynamicDescription: Change Game Music to $
-        functionEvaluators:
-        - rid: 6507296178306548448
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Audio
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 6507296178306548448
-      type: {class: AudioNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Audio Clip
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 8300000, guid: f85db3de60be62d459f0d0c7cb76ff58, type: 3}
     - rid: 6507296178306548449
       type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -778,116 +738,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {x: 100.972, y: 2.116, z: 12.81}
-    - rid: 6507296178306548623
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: EnableAbility
-        functionDescription: Unit/Ability/Enable Ability on Unit
-        functionDynamicDescription: Enable $ on $
-        functionEvaluators:
-        - rid: 6507296178306548624
-        - rid: 6507296178306548625
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 6507296178306548624
-      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Ability
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: {fileID: 11400000, guid: 2f1f41c2a1067594e8376bffc6d6f7a2, type: 2}
-    - rid: 6507296178306548625
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Player
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 6507296178306548626
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: EnableAbility
-        functionDescription: Unit/Ability/Enable Ability on Unit
-        functionDynamicDescription: Enable $ on $
-        functionEvaluators:
-        - rid: 6507296178306548627
-        - rid: 6507296178306548628
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 6507296178306548627
-      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Ability
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: {fileID: 11400000, guid: 439a83325212fdd46bf8dc30aca6abfa, type: 2}
-    - rid: 6507296178306548628
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Player
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
     - rid: 6507296178306548629
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -924,63 +774,8 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: {fileID: 11400000, guid: 20b3882b9e46ba2479d64fbfea603e83, type: 2}
+        value: {fileID: 11400000, guid: 6b7b789e01379a9478be03db9a1a9b75, type: 2}
     - rid: 6507296178306548631
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Player
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 6507296178306548632
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: EnableAbility
-        functionDescription: Unit/Ability/Enable Ability on Unit
-        functionDynamicDescription: Enable $ on $
-        functionEvaluators:
-        - rid: 6507296178306548633
-        - rid: 6507296178306548634
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 6507296178306548633
-      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Ability
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: {fileID: 11400000, guid: af6c13f50f19667428b50bcbd9c4eabe, type: 2}
-    - rid: 6507296178306548634
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
@@ -1501,61 +1296,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 80
-    - rid: 6507296248562712591
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: Play2DSound
-        functionDescription: Audio/Play Sound
-        functionDynamicDescription: Play $ at $ volume
-        functionEvaluators:
-        - rid: 6507296248562712592
-        - rid: 6507296248562712593
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Audio
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 6507296248562712592
-      type: {class: AudioNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Audio Clip
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 8300000, guid: a4ecddd6670102e4d89268719241909f, type: 3}
-    - rid: 6507296248562712593
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: '%'
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 70
     - rid: 6507296248562712594
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -2780,3 +2520,39 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 100
+    - rid: 6507296268711887393
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ChangeGameMusic
+        functionDescription: Audio/Play Music
+        functionDynamicDescription: Change Game Music to $
+        functionEvaluators:
+        - rid: 6507296268711887394
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Audio
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 6507296268711887394
+      type: {class: AudioNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Audio Clip
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 8300000, guid: f85db3de60be62d459f0d0c7cb76ff58, type: 3}

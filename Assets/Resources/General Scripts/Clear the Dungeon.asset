@@ -25,23 +25,15 @@ MonoBehaviour:
       - rid: 6507296248562712783
       - rid: 6507296248562712757
       - rid: 6507296248562712765
-    - scriptName: Quest Progress - Vampires
-      scriptUID: 1736815329
-      hasWait: 0
-      eventNodes:
-      - rid: 6507296248562712794
-      conditionNodes:
-      - rid: 6507296251336458714
-      actionNodes:
-      - rid: 6507296251336458769
-      - rid: 6507296248562712824
+      - rid: 6507296274196201652
+      - rid: 6507296274196201656
     - scriptName: Quest Progress - Obelisks
       scriptUID: 1085053191
       hasWait: 0
       eventNodes:
       - rid: 6507296248562712829
       conditionNodes:
-      - rid: 6507296251336458240
+      - rid: 6507296274196201566
       actionNodes:
       - rid: 6507296248562712833
     - scriptName: Quest Completed
@@ -54,6 +46,32 @@ MonoBehaviour:
       - rid: 6507296248562712888
       - rid: 6507296248562712884
       - rid: 6507296248562712887
+    - scriptName: Quest Progress - Vampire Fledgling
+      scriptUID: 1598738527
+      hasWait: 0
+      eventNodes:
+      - rid: 6507296274196201660
+      conditionNodes:
+      - rid: 6507296274196201661
+      actionNodes:
+      - rid: 6507296274196201738
+      - rid: 6507296274196201739
+      - rid: 6507296274196201743
+      - rid: 6507296274196201702
+      - rid: 6507296274196201749
+    - scriptName: Quest Progress - Edward Razortooth
+      scriptUID: 1287295179
+      hasWait: 0
+      eventNodes:
+      - rid: 6507296274196201704
+      conditionNodes:
+      - rid: 6507296274196201705
+      actionNodes:
+      - rid: 6507296274196201735
+      - rid: 6507296274196201733
+      - rid: 6507296274196201746
+      - rid: 6507296274196201731
+      - rid: 6507296274196201750
   references:
     version: 2
     RefIds:
@@ -225,7 +243,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Kill All Vampires
+        value: Kill Vampire Fledgling
         options: []
     - rid: 6507296248562712767
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
@@ -263,7 +281,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 3
+        value: 1
     - rid: 6507296248562712781
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -339,86 +357,6 @@ MonoBehaviour:
         allowFunction: 1
         value: Clear the Dungeon
         options: []
-    - rid: 6507296248562712794
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: WhenUnitIsKilled
-        functionDescription: Unit/Unit is killed
-        functionDynamicDescription: 'When a unit is killed (Presets: <color=yellow>Killed
-          Unit</color>, <color=yellow>Killing Unit</color>, <color=yellow>Killing
-          Ability</color>, <color=yellow>Is Critical</color>)'
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Event
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        presets:
-        - Killed Unit
-        - Killing Unit
-        - Killing Ability
-        - Is Critical
-    - rid: 6507296248562712824
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: ShowTutorialMessage
-        functionDescription: UI/Show Tutorial Message
-        functionDynamicDescription: Show a tutorial message printing $ for $ seconds
-        functionEvaluators:
-        - rid: 6507296248562712825
-        - rid: 6507296248562712826
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: UI
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 6507296248562712825
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Text
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: You have slain a vampire, well done.
-        options: []
-    - rid: 6507296248562712826
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 5
     - rid: 6507296248562712829
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -667,17 +605,17 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 5
-    - rid: 6507296251336458240
+    - rid: 6507296274196201566
       type: {class: BoolNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: UnitIsInUnitGroup
-        functionDescription: Unit Group/Unit is in Unit Group
-        functionDynamicDescription: $ is in $
+        functionName: UnitTypeMatch
+        functionDescription: Unit/Unit Matches Template
+        functionDynamicDescription: $ type matches $
         functionEvaluators:
-        - rid: 6507296251336458241
-        - rid: 6507296251336458242
+        - rid: 6507296274196201567
+        - rid: 6507296274196201568
         presetName: 
         variableName: 
         stringSuffix: 
@@ -687,7 +625,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0
-    - rid: 6507296251336458241
+    - rid: 6507296274196201567
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
@@ -701,29 +639,30 @@ MonoBehaviour:
         stringSuffix: 
         indent: 0
         nodeIcon: 
-        allowValue: 0
+        allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 0}
-    - rid: 6507296251336458242
-      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+    - rid: 6507296274196201568
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
-        tempName: Unit Group
-        functionName: GetUnitGroupVariable
-        functionDescription: Unit Group Variable
-        functionDynamicDescription: 'Unit Group: $'
+        tempName: Unit
+        functionName: GetUnitVariable
+        functionDescription: Unit Variable
+        functionDynamicDescription: 'Unit: $'
         functionEvaluators:
-        - rid: 6507296251336458318
+        - rid: 6507296274196201584
         presetName: 
         variableName: 
         stringSuffix: 
         indent: 0
         nodeIcon: 
-        allowValue: 0
+        allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 6507296251336458318
+        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+    - rid: 6507296274196201584
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -738,97 +677,22 @@ MonoBehaviour:
         indent: 0
         nodeIcon: 
         allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: Spawners
+        allowPreset: 1
+        allowFunction: 1
+        value: Spawner
         options: []
-    - rid: 6507296251336458714
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: UnitIsInUnitGroup
-        functionDescription: Unit Group/Unit is in Unit Group
-        functionDynamicDescription: $ is in $
-        functionEvaluators:
-        - rid: 6507296251336458715
-        - rid: 6507296251336458716
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Condition
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 6507296251336458715
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Killed Unit
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 6507296251336458716
-      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Unit Group
-        functionName: GetUnitGroupVariable
-        functionDescription: Unit Group Variable
-        functionDynamicDescription: 'Unit Group: $'
-        functionEvaluators:
-        - rid: 6507296251336458738
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 6507296251336458738
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Text
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: Vampires
-        options: []
-    - rid: 6507296251336458769
+    - rid: 6507296274196201652
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: ModifySpecificQuestRequirementProgress2
-        functionDescription: Quests/Modify Requirement Progress
-        functionDynamicDescription: Modify quest progress of $ on $ by $
+        functionName: AddQuestRequirement2
+        functionDescription: Quests/Add Quest Requirement
+        functionDynamicDescription: Add $ requirement to $ with $ progress increments
         functionEvaluators:
-        - rid: 6507296251336458770
-        - rid: 6507296251336458771
-        - rid: 6507296251336458772
+        - rid: 6507296274196201653
+        - rid: 6507296274196201654
+        - rid: 6507296274196201655
         presetName: 
         variableName: 
         stringSuffix: 
@@ -837,7 +701,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 6507296251336458770
+    - rid: 6507296274196201653
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -854,9 +718,9 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Kill All Vampires
+        value: Kill Edward Razortooth
         options: []
-    - rid: 6507296251336458771
+    - rid: 6507296274196201654
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -875,7 +739,7 @@ MonoBehaviour:
         allowFunction: 1
         value: Clear the Dungeon
         options: []
-    - rid: 6507296251336458772
+    - rid: 6507296274196201655
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -893,3 +757,687 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 1
+    - rid: 6507296274196201656
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: AddQuestRequirement2
+        functionDescription: Quests/Add Quest Requirement
+        functionDynamicDescription: Add $ requirement to $ with $ progress increments
+        functionEvaluators:
+        - rid: 6507296274196201657
+        - rid: 6507296274196201658
+        - rid: 6507296274196201659
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: QuestNew
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 6507296274196201657
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Requirement
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Kill Balthazar the Bloody
+        options: []
+    - rid: 6507296274196201658
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Quest Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Clear the Dungeon
+        options: []
+    - rid: 6507296274196201659
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 6507296274196201660
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: WhenUnitIsKilled
+        functionDescription: Unit/Unit is killed
+        functionDynamicDescription: 'When a unit is killed (Presets: <color=yellow>Killed
+          Unit</color>, <color=yellow>Killing Unit</color>, <color=yellow>Killing
+          Ability</color>, <color=yellow>Is Critical</color>)'
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Event
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Killed Unit
+        - Killing Unit
+        - Killing Ability
+        - Is Critical
+    - rid: 6507296274196201661
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: UnitTypeMatch
+        functionDescription: Unit/Unit Matches Template
+        functionDynamicDescription: $ type matches $
+        functionEvaluators:
+        - rid: 6507296274196201662
+        - rid: 6507296274196201663
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 6507296274196201662
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Killed Unit
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+    - rid: 6507296274196201663
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Unit
+        functionName: GetUnitWithLabel
+        functionDescription: Unit with Label
+        functionDynamicDescription: Unit labeled $
+        functionEvaluators:
+        - rid: 6507296274196201701
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+    - rid: 6507296274196201701
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Text
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Vampire Fledgling
+        options: []
+    - rid: 6507296274196201702
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DestroyRegions
+        functionDescription: Region/Destroy Region
+        functionDynamicDescription: Destroy regions named $
+        functionEvaluators:
+        - rid: 6507296274196201703
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Region
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 6507296274196201703
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Region Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Gate 1
+        options: []
+    - rid: 6507296274196201704
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: WhenUnitIsKilled
+        functionDescription: Unit/Unit is killed
+        functionDynamicDescription: 'When a unit is killed (Presets: <color=yellow>Killed
+          Unit</color>, <color=yellow>Killing Unit</color>, <color=yellow>Killing
+          Ability</color>, <color=yellow>Is Critical</color>)'
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Event
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Killed Unit
+        - Killing Unit
+        - Killing Ability
+        - Is Critical
+    - rid: 6507296274196201705
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: UnitTypeMatch
+        functionDescription: Unit/Unit Matches Template
+        functionDynamicDescription: $ type matches $
+        functionEvaluators:
+        - rid: 6507296274196201706
+        - rid: 6507296274196201707
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 6507296274196201706
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Killed Unit
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+    - rid: 6507296274196201707
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Unit
+        functionName: GetUnitWithLabel
+        functionDescription: Unit with Label
+        functionDynamicDescription: Unit labeled $
+        functionEvaluators:
+        - rid: 6507296274196201730
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+    - rid: 6507296274196201730
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Text
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Edward Razortooth
+        options: []
+    - rid: 6507296274196201731
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DestroyRegions
+        functionDescription: Region/Destroy Region
+        functionDynamicDescription: Destroy regions named $
+        functionEvaluators:
+        - rid: 6507296274196201732
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Region
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 6507296274196201732
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Region Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Gate 2
+        options: []
+    - rid: 6507296274196201733
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ShakeScreen
+        functionDescription: Feedback/Shake Screen
+        functionDynamicDescription: Shake the screen with a strength of $
+        functionEvaluators:
+        - rid: 6507296274196201734
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 1
+        nodeIcon: Effect
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 6507296274196201734
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 2
+    - rid: 6507296274196201735
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DoActionsXTimesStoringVariable
+        functionDescription: Flow/For Loop
+        functionDynamicDescription: 'Do actions $ times (Variable Storing Current
+          Iteration: $)'
+        functionEvaluators:
+        - rid: 6507296274196201736
+        - rid: 6507296274196201737
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Loop
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 6507296274196201736
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Number
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 3
+    - rid: 6507296274196201737
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Loop ID
+        options: []
+    - rid: 6507296274196201738
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DoActionsXTimesStoringVariable
+        functionDescription: Flow/For Loop
+        functionDynamicDescription: 'Do actions $ times (Variable Storing Current
+          Iteration: $)'
+        functionEvaluators:
+        - rid: 6507296274196201740
+        - rid: 6507296274196201741
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Loop
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 6507296274196201739
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ShakeScreen
+        functionDescription: Feedback/Shake Screen
+        functionDynamicDescription: Shake the screen with a strength of $
+        functionEvaluators:
+        - rid: 6507296274196201742
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 1
+        nodeIcon: Effect
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 6507296274196201740
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Number
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 3
+    - rid: 6507296274196201741
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Loop ID
+        options: []
+    - rid: 6507296274196201742
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 2
+    - rid: 6507296274196201743
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ShowTutorialMessage
+        functionDescription: UI/Show Tutorial Message
+        functionDynamicDescription: Show a tutorial message printing $ for $ seconds
+        functionEvaluators:
+        - rid: 6507296274196201744
+        - rid: 6507296274196201745
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: UI
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 6507296274196201744
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Text
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: It seems a new area is available. Hop to it, there's more things to
+          kill.
+        options: []
+    - rid: 6507296274196201745
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 15
+    - rid: 6507296274196201746
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ShowTutorialMessage
+        functionDescription: UI/Show Tutorial Message
+        functionDynamicDescription: Show a tutorial message printing $ for $ seconds
+        functionEvaluators:
+        - rid: 6507296274196201747
+        - rid: 6507296274196201748
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: UI
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 6507296274196201747
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Text
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: The final boss awaits. I hope you make it out, you've come so far.
+          Good luck!
+        options: []
+    - rid: 6507296274196201748
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 15
+    - rid: 6507296274196201749
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DisableScript
+        functionDescription: Flow/Disable This Script
+        functionDynamicDescription: Disable This Script
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Cancel
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 6507296274196201750
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DisableScript
+        functionDescription: Flow/Disable This Script
+        functionDynamicDescription: Disable This Script
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Cancel
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1

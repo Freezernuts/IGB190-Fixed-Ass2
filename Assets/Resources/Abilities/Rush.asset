@@ -132,6 +132,42 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {x: 0, y: 0, z: 0}
+    - rid: 6507296268711887635
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 3
+        tempName: Number
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: m
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 6507296268711887636
+      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 3
+        tempName: Location
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {x: 0, y: 0, z: 0}
     - rid: 7228903372886114339
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
       data:
@@ -147,10 +183,10 @@ MonoBehaviour:
           - rid: 7228903372886114342
           - rid: 7228903372886114343
           - rid: 7228903372886114344
-          - rid: 7228903372886114345
           - rid: 7228903372886114346
           - rid: 7228903372886114416
           - rid: 6507296268711887001
+          - rid: 7228903372886114345
     - rid: 7228903372886114340
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -487,11 +523,13 @@ MonoBehaviour:
       data:
         returnType: 4
         tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Casting Unit
+        functionName: ClosestEnemyToPoint
+        functionDescription: Closest Enemy to Point
+        functionDynamicDescription: Closest enemy within $ of $
+        functionEvaluators:
+        - rid: 6507296268711887635
+        - rid: 6507296268711887636
+        presetName: Target Unit
         variableName: 
         stringSuffix: 
         indent: 0

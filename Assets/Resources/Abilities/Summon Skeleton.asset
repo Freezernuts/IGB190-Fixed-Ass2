@@ -21,7 +21,7 @@ MonoBehaviour:
   abilityAnimation: None
   range: 30
   castTime: 0
-  abilityCooldown: 5
+  abilityCooldown: 10
   abilityCost: 0
   movementLock: 1
   animationActivationPosition: 0.5
@@ -54,6 +54,7 @@ MonoBehaviour:
           - rid: 6507296105565782068
           - rid: 6507296105565782048
           - rid: 7228903391467667456
+          - rid: 6507296268711887637
           - rid: 7228903391467667551
     - rid: 2658598258988810332
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
@@ -247,6 +248,99 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 3
+    - rid: 6507296268711887637
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SpawnUnit
+        functionDescription: Unit/Spawn Monster
+        functionDynamicDescription: Spawn $ at $
+        functionEvaluators:
+        - rid: 6507296268711887638
+        - rid: 6507296268711887639
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 1
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 6507296268711887638
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: {fileID: 5560953499317727810, guid: 3af91c814aab5ea4ca125fde32872b0a, type: 3}
+    - rid: 6507296268711887639
+      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Location
+        functionName: RandomPointNearUnit
+        functionDescription: Random/Random Point Near Unit
+        functionDynamicDescription: Random point within $ of $
+        functionEvaluators:
+        - rid: 6507296268711887640
+        - rid: 6507296268711887641
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {x: 0, y: 0, z: 0}
+    - rid: 6507296268711887640
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Range
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: m
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 4
+    - rid: 6507296268711887641
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
     - rid: 7228903391467667456
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -283,7 +377,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: {fileID: 1113393009475316218, guid: 95e79f8cd03667940b5af7531101d9f4, type: 3}
+        value: {fileID: 1649265759049038220, guid: 02102f2f786a49d418694911eea0f16f, type: 3}
     - rid: 7228903391467667458
       type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:

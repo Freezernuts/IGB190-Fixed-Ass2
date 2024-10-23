@@ -20,7 +20,7 @@ MonoBehaviour:
   abilityDescription: Rain down divine judgement on your enemies. Deal 50% attack
     damage to enemies within 4 meters and create a debuff area on that lowers enemy
     damage and armour for 12 seconds.
-  abilityAnimation: Bow Shoot
+  abilityAnimation: Magic Area Attack
   range: 8
   castTime: 0.1
   abilityCooldown: 15
@@ -192,7 +192,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
+        value: 2
     - rid: 7228903372886114402
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -620,7 +620,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
+        value: 2
     - rid: 7228903372886114448
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
