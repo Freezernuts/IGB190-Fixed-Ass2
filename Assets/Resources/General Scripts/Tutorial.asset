@@ -86,6 +86,7 @@ MonoBehaviour:
       - rid: 6507296248562712737
       - rid: 6507296248562712607
       - rid: 6507296248562712610
+      - rid: 6507296293177000217
     - scriptName: Teleport to Game
       scriptUID: 1394720319
       hasWait: 0
@@ -100,6 +101,7 @@ MonoBehaviour:
       - rid: 6507296248562712788
       - rid: 6507296248562712792
       - rid: 6507296268711887393
+      - rid: 6507296293177000218
   references:
     version: 2
     RefIds:
@@ -2556,3 +2558,37 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 8300000, guid: f85db3de60be62d459f0d0c7cb76ff58, type: 3}
+    - rid: 6507296293177000217
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DisableScript
+        functionDescription: Flow/Disable This Script
+        functionDynamicDescription: Disable This Script
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Cancel
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 6507296293177000218
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DisableScript
+        functionDescription: Flow/Disable This Script
+        functionDynamicDescription: Disable This Script
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Cancel
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
