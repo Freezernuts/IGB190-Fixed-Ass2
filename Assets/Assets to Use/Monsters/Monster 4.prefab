@@ -100,7 +100,7 @@ MonoBehaviour:
   health: 100
   resource: 0
   baseDamage: 12
-  baseAttacksPerSecond: 2
+  baseAttacksPerSecond: 1
   baseMaxHealth: 100
   baseMaxResource: 100
   baseMovementSpeed: 1
@@ -119,7 +119,7 @@ MonoBehaviour:
   isDead: 0
   spawnEffect: {fileID: -68291847361665647, guid: e4357c10759ce5742b540e7790443698, type: 3}
   goldModifier: 1
-  experienceModifier: 1
+  experienceModifier: 3
   corpseDuration: 5
   monsterLabel: 
   isEmpowered: 0

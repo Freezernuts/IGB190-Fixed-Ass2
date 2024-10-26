@@ -22,7 +22,6 @@ MonoBehaviour:
       conditionNodes:
       - rid: 6507296293177000262
       actionNodes:
-      - rid: 6507296293177000420
       - rid: 6507296293177000265
   references:
     version: 2
@@ -162,39 +161,3 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {x: 34.23499, y: 0, z: -0.24}
-    - rid: 6507296293177000420
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: Wait
-        functionDescription: Flow/Wait
-        functionDynamicDescription: Wait for $ seconds
-        functionEvaluators:
-        - rid: 6507296293177000421
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Timer
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 6507296293177000421
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Number
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 5

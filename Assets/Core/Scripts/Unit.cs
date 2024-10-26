@@ -99,8 +99,10 @@ public class Unit : Interactable
     protected virtual float ApplyDamageFormula(float amount, bool isCritical,
         Unit damagingUnit, IEngineHandler damageSource)
     {
-        // Apply damage modifiers (e.g. a -50% damage taken buff).
-        amount *= GetBaseDamageTakenModifier();
+        float armor = stats[Stat.Armor].GetValue();
+        float constant = 100f; // Chooses your value here.
+        float scalingFactor = 1.5f; // Choose your value here
+        amount = amount * (1.0f / (1.0f + Mathf.Pow(armor / constant, scalingFactor)));
 
         // Armor currently doesn't do anything? Add logic here.
 

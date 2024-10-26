@@ -235,7 +235,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1000 Gold
+        value: 50
         options: []
     - rid: 4697138162872877090
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
@@ -463,7 +463,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1000
+        value: 50
     - rid: 6507296248562712664
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:

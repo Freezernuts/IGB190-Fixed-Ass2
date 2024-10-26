@@ -5016,7 +5016,7 @@ MonoBehaviour:
   isDead: 0
   spawnEffect: {fileID: -68291847361665647, guid: c0ee2f05980c4c74f922864461f883d8, type: 3}
   goldModifier: 1
-  experienceModifier: 1
+  experienceModifier: 2
   corpseDuration: 5
   monsterLabel: 
   isEmpowered: 0

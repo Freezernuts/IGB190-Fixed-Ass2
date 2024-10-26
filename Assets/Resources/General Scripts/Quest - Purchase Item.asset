@@ -35,7 +35,7 @@ MonoBehaviour:
       - rid: 4697138162872877063
       actionNodes:
       - rid: 4697138162872877064
-      - rid: 4697138162872877065
+      - rid: 6507296332980158685
       - rid: 4697138162872877066
   references:
     version: 2
@@ -213,24 +213,6 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 4697138162872877065
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: AddGold
-        functionDescription: Player/Add Gold
-        functionDynamicDescription: Add $ gold to the player
-        functionEvaluators:
-        - rid: 4697138162872877079
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
     - rid: 4697138162872877066
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -308,7 +290,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 2500
+        value: 0
     - rid: 4697138162872877070
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
@@ -401,7 +383,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 500 Gold
+        value: 100 XP
         options: []
     - rid: 4697138162872877075
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
@@ -478,11 +460,29 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 1
-    - rid: 4697138162872877079
+    - rid: 6507296332980158685
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: AddExperience
+        functionDescription: Player/Add Experience
+        functionDynamicDescription: Add $ experience to the player
+        functionEvaluators:
+        - rid: 6507296332980158686
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 6507296332980158686
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: Number
+        tempName: 
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -495,4 +495,4 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 500
+        value: 100
