@@ -17,14 +17,14 @@ MonoBehaviour:
   abilityName: Smite
   abilityIcon: {fileID: 21300000, guid: 952209fe1207b354eb3e292e5f01bdf7, type: 3}
   targetMode: 4
-  abilityDescription: Rain down divine judgement on your enemies. Deal 50% attack
-    damage to enemies within 4 meters and create a debuff area on that lowers enemy
-    damage and armour for 12 seconds.
+  abilityDescription: Rain down divine judgement on your enemies. Deal 100% attack
+    damage to enemies within 4 meters over 4 seconds and create a debuff area on
+    that lowers enemy damage and armour for 12 seconds.
   abilityAnimation: Magic Area Attack
   range: 8
   castTime: 0.1
   abilityCooldown: 15
-  abilityCost: 50
+  abilityCost: 75
   movementLock: 1
   animationActivationPosition: 0.5
   canMoveWhileCasting: 1
@@ -58,7 +58,10 @@ MonoBehaviour:
           - rid: 7228903372886114432
           - rid: 7228903372886114402
           - rid: 7228903372886114433
-          - rid: 7228903376399368194
+          - rid: 7228903624783167492
+          - rid: 7228903624783167493
+          - rid: 7228903624783167494
+          - rid: 7228903624783167495
     - rid: 7228903372886114387
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -866,7 +869,62 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {x: 0, y: 0, z: 0}
-    - rid: 7228903376399368194
+    - rid: 7228903624783167492
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DoActionsXTimes
+        functionDescription: Flow/For Loop
+        functionDynamicDescription: Do actions $ times
+        functionEvaluators:
+        - rid: 7228903624783167497
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Loop
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 7228903624783167493
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: Wait
+        functionDescription: Flow/Wait
+        functionDynamicDescription: Wait for $ seconds
+        functionEvaluators:
+        - rid: 7228903624783167498
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 1
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 7228903624783167494
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SetUnitGroupVariable
+        functionDescription: Variables/Set Unit Group
+        functionDynamicDescription: Set Unit Group named $ to $
+        functionEvaluators:
+        - rid: 7228903624783167499
+        - rid: 7228903624783167500
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 1
+        nodeIcon: Variable
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 7228903624783167495
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -875,17 +933,91 @@ MonoBehaviour:
         functionDescription: Unit/Deal Damage to Unit Group
         functionDynamicDescription: Deal $ attack damage to $
         functionEvaluators:
-        - rid: 7228903376399368195
-        - rid: 7228903376399368196
+        - rid: 7228903624783167501
+        - rid: 7228903624783167502
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
+        indent: 1
         nodeIcon: Unit
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 7228903376399368195
+    - rid: 7228903624783167497
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Number
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 8
+    - rid: 7228903624783167498
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Number
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0.5
+    - rid: 7228903624783167499
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Variable Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Targets
+        options: []
+    - rid: 7228903624783167500
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Unit Group
+        functionName: AllEnemiesWithinRangeOfPoint2
+        functionDescription: All Enemies Near Point
+        functionDynamicDescription: All enemies within $ of $
+        functionEvaluators:
+        - rid: 7228903624783167509
+        - rid: 7228903624783167510
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 7228903624783167501
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -902,8 +1034,8 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 50
-    - rid: 7228903376399368196
+        value: 25
+    - rid: 7228903624783167502
       type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -912,8 +1044,8 @@ MonoBehaviour:
         functionDescription: All Enemies Near Point
         functionDynamicDescription: All enemies within $ of $
         functionEvaluators:
-        - rid: 7228903376399368197
-        - rid: 7228903376399368198
+        - rid: 7228903624783167511
+        - rid: 7228903624783167512
         presetName: 
         variableName: 
         stringSuffix: 
@@ -922,7 +1054,7 @@ MonoBehaviour:
         allowValue: 0
         allowPreset: 1
         allowFunction: 1
-    - rid: 7228903376399368197
+    - rid: 7228903624783167509
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -940,7 +1072,43 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 4
-    - rid: 7228903376399368198
+    - rid: 7228903624783167510
+      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Location
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Ability Target Location
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {x: 0, y: 0, z: 0}
+    - rid: 7228903624783167511
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Number
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: m
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 4
+    - rid: 7228903624783167512
       type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4

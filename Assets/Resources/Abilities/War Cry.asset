@@ -22,8 +22,8 @@ MonoBehaviour:
   abilityAnimation: Shout
   range: 9999
   castTime: 0
-  abilityCooldown: 3
-  abilityCost: 30
+  abilityCooldown: 5
+  abilityCost: 50
   movementLock: 1
   animationActivationPosition: 0.5
   canMoveWhileCasting: 0

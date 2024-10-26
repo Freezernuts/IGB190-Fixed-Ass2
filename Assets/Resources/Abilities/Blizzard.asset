@@ -23,7 +23,7 @@ MonoBehaviour:
   range: 15
   castTime: 0.1
   abilityCooldown: 15
-  abilityCost: 0
+  abilityCost: 75
   movementLock: 1
   animationActivationPosition: 0.5
   canMoveWhileCasting: 0
@@ -281,7 +281,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 20
+        value: 45
     - rid: 248813534025351176
       type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
       data:
@@ -520,7 +520,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 50
+        value: 70
     - rid: 6728881780876902471
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
