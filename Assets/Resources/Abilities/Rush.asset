@@ -17,8 +17,10 @@ MonoBehaviour:
   abilityName: Rush
   abilityIcon: {fileID: 21300000, guid: 4f7dcdcb58b98b64fa5ba4f9f480e5de, type: 3}
   targetMode: 4
-  abilityDescription: Charge towards the target location, dealing 150% weapon damage
-    to all enemies near the point of impact.
+  abilityDescription: Slow all enemies within 4m around you by 50% for 4 seconds,
+    then dash towards a target enemy at lightning spend decreasing the attack speed
+    of all enemies within 4m  by 30% for 4 seconds and dealing 150% attack damage
+    on impact.
   abilityAnimation: Jump
   range: 6
   castTime: 0
@@ -76,7 +78,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 150
+        value: 100
     - rid: 6507296268711887003
       type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
       data:

@@ -22,7 +22,7 @@ MonoBehaviour:
   abilityAnimation: Bow Shoot
   range: 15
   castTime: 0.1
-  abilityCooldown: 15
+  abilityCooldown: 20
   abilityCost: 75
   movementLock: 1
   animationActivationPosition: 0.5

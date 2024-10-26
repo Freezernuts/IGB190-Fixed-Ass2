@@ -202,10 +202,11 @@ MonoBehaviour:
       data:
         returnType: 0
         tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
+        functionName: UnitHealth
+        functionDescription: Unit/Unit Health
+        functionDynamicDescription: $ Health
+        functionEvaluators:
+        - rid: 7228903626612146294
         presetName: 
         variableName: 
         stringSuffix: 
@@ -230,6 +231,24 @@ MonoBehaviour:
         indent: 0
         nodeIcon: 
         allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 7228903626612146294
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 3
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
