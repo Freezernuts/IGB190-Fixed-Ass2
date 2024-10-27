@@ -39,7 +39,7 @@ MonoBehaviour:
   guaranteedStats:
   - stat: 0
     minimum: 8
-    maximum: 10
+    maximum: 12
     isPercent: 0
   randomisableStats: []
   references:
